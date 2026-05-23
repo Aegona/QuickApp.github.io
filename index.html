@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Launcher</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+  />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="launcher">
+
+    <div class="header">
+      <h1>⚡ Quick Launcher</h1>
+      <p>เปิดแอปโปรดหรือค้นหาได้เลย</p>
+    </div>
+
+    <div class="search-bar">
+      <i class="ti ti-search icon-search" aria-hidden="true"></i>
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="ค้นหาหรือพิมพ์ URL เช่น youtube.com"
+        onkeydown="handleSearch(event)"
+        autofocus
+      />
+      <button class="search-btn" onclick="goSearch()">
+        <i class="ti ti-arrow-right" aria-hidden="true"></i> ไป
+      </button>
+    </div>
+
+    <div class="section-title">⭐ แอปยอดนิยม</div>
+    <div class="apps-grid">
+
+      <a class="app-item" href="https://www.youtube.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#FF0000;">
+          <i class="ti ti-brand-youtube" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">YouTube</span>
+      </a>
+
+      <a class="app-item" href="https://www.facebook.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#1877F2;">
+          <i class="ti ti-brand-facebook" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Facebook</span>
+      </a>
+
+      <a class="app-item" href="https://www.instagram.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">
+          <i class="ti ti-brand-instagram" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Instagram</span>
+      </a>
+      
+       <a class="app-item" href="https://chromewebstore.google.com/detail/line/ophjlpahpchlmihnnnihgmmeilfjmjjc" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#1DB954;">
+          <i class="ti ti-brand-x" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">LINE</span>
+      </a>
+
+      <a class="app-item" href="https://x.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#000;">
+          <i class="ti ti-brand-x" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">X</span>
+      </a>
+
+      <a class="app-item" href="https://www.tiktok.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#010101;">
+          <i class="ti ti-brand-tiktok" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">TikTok</span>
+      </a>
+
+      <a class="app-item" href="https://mail.google.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#EA4335;">
+          <i class="ti ti-mail" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Gmail</span>
+      </a>
+
+      <a class="app-item" href="https://drive.google.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#34A853;">
+          <i class="ti ti-brand-google-drive" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Drive</span>
+      </a>
+
+      
+
+      <a class="app-item" href="https://github.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#24292f;">
+          <i class="ti ti-brand-github" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">GitHub</span>
+      </a>
+
+      <a class="app-item" href="https://www.netflix.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#E50914;">
+          <i class="ti ti-device-tv" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Netflix</span>
+      </a>
+
+      <a class="app-item" href="https://open.spotify.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#1DB954;">
+          <i class="ti ti-brand-spotify" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Spotify</span>
+      </a>
+
+     
+
+      <a class="app-item" href="https://www.claude.ai" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#CC785C;">
+          <i class="ti ti-sparkles" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Claude</span>
+      </a>
+
+      <a class="app-item" href="https://chat.openai.com" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#10A37F;">
+          <i class="ti ti-robot" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">ChatGPT</span>
+      </a>
+      
+            <a class="app-item" href="https://gemini.google.com/" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#27F5D6;">
+          <i class="ti ti-robot" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Gimini</span>
+      </a>
+      
+                 
+
+      <a class="app-item" href="https://translate.google.com/?sl=auto&tl=th&op=translate" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#4285F4;">
+          <i class="ti ti-language" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Translate</span>
+      </a>
+      
+            <a class="app-item" href="https://th.y8.com/" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#FF0000;">
+          <i class="ti ti-language" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Y8</span>
+      </a>
+      
+                  <a class="app-item" href="https://eaglercraft.com/#google_vignette:~:text=a%20Minecraft%20server.-,Play%20Now!,-Play%20with%20Friends" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#00C231;">
+          <i class="ti ti-language" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">Minecraft</span>
+      </a>
+      
+                        <a class="app-item" href="https://chromewebstore.google.com/search/game" target="_blank" rel="noopener">
+        <div class="app-icon" style="background:#000;">
+          <i class="ti ti-language" style="color:#fff;" aria-hidden="true"></i>
+        </div>
+        <span class="app-name">โหลดเหมอื่นๆ</span>
+      </a>
+
+    </div>
+
+    <div class="section-title">📰 ข่าวสารและอื่นๆ</div>
+    <div class="quick-links">
+      <a class="chip" href="https://news.google.com" target="_blank" rel="noopener">
+        <i class="ti ti-news" aria-hidden="true"></i> Google News
+      </a>
+      <a class="chip" href="https://www.thairath.co.th" target="_blank" rel="noopener">
+        <i class="ti ti-newspaper" aria-hidden="true"></i> ไทยรัฐ
+      </a>
+      <a class="chip" href="https://www.sanook.com" target="_blank" rel="noopener">
+        <i class="ti ti-star" aria-hidden="true"></i> Sanook
+      </a>
+      <a class="chip" href="https://weather.com" target="_blank" rel="noopener">
+        <i class="ti ti-cloud" aria-hidden="true"></i> อากาศ
+      </a>
+      <a class="chip" href="https://www.wongnai.com" target="_blank" rel="noopener">
+        <i class="ti ti-map-pin" aria-hidden="true"></i> Wongnai
+      </a>
+       <a class="chip" href="https://chromewebstore.google.com/search/Cursor" target="_blank" rel="noopener">
+        <i class="ti ti-map-pin" aria-hidden="true"></i> ตกแต่งเมาส์
+      </a>
+      <a class="chip" href="https://www.pantip.com" target="_blank" rel="noopener">
+        <i class="ti ti-message-circle" aria-hidden="true"></i> Pantip
+      </a>
+      
+      <a class="chip" href="https://chromewebstore.google.com/detail/%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%84%E0%B8%B5%E0%B8%A2%E0%B8%87-%E0%B9%80%E0%B8%A5%E0%B9%88%E0%B8%99%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B9%83/gcnahbcdhgjobeahhdogjhhmnlopcjaj" target="_blank" rel="noopener">
+        <i class="ti ti-map-pin" aria-hidden="true"></i> เกมข้างเคียง - เล่นมินิเกมในแถบด้านข้าง
+      </a>
+      
+      
+    </div>
+
+    <div class="footer">คลิกแอปหรือพิมพ์ในช่องค้นหาเพื่อเริ่มต้น 🚀</div>
+    <div class="footer">นาย อนุชิต แสนทวีสุข ม.5/2 เลขที่ 8 รายวิชา คอมพิวเตอร์โค้ดโดย HTML , Ai Gimini</div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
